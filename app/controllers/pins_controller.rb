@@ -11,11 +11,13 @@ class PinsController < ApplicationController
 	end
 
 	def create
+		debugger
 		@pin = current_user.pins.build(pin_params)
+		@pin.pix = params[:pin][:pix]
 		if @pin.save
 			redirect_to pin_path(@pin), notice: "Congrats!"
 		else
-			render 'new'
+			render :new
 		end
 	end
 
@@ -26,13 +28,13 @@ class PinsController < ApplicationController
 		if @pin.update(pin_params)
 			redirect_to @pin, notice: "Congrats!"
 		else
-			render 'edit'
+			render :edit
 		end
 	end
 
 	def destroy
 		@pin.destroy
-		redirect_to 'index'
+		redirect_to :index
 	end
 
 	private
@@ -40,6 +42,6 @@ class PinsController < ApplicationController
 		@pin = Pin.find(params[:id])
 	end
 	def pin_params
-		params.require(:pin).permit(:title,:description)
+		params.require(:pin).permit(:title,:description, :pic, :pix)
 	end
 end

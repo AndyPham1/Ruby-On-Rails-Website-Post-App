@@ -1,10 +1,13 @@
-%h1 Pin Index Pg
 
-- @pins.each do |pin|
-		%p title
-		=link_to pin.title, pin_path(pin)
-		%p description
-		=pin.description
-		=link_to "Edit", edit_pin_path(pin)
-		=link_to "Rid", pin_path(pin), method: :delete, data: {confirm: "Are you sure?"}
+%h1 Pin Index Pg
+#pins.transitions-enabled
+	- @pins.each do |pin|
+		.box(style="width:300px;display:inline-block;float:left")
+			=link_to image_tag(pin.pix.url, size: "100x100") if pin.pix?
+			%p title
+			=link_to pin.title, pin_path(pin)
+			%p description
+			=pin.description
+			=link_to "Edit", edit_pin_path(pin)
+			=link_to "Rid", pin_path(pin), method: :delete, data: {confirm: "Are you sure?"}
 		
