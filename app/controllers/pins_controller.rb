@@ -15,7 +15,7 @@ class PinsController < ApplicationController
 		if @pin.save
 			redirect_to pin_path(@pin), notice: "Congrats!"
 		else
-			redirect_to 'new'
+			render 'new'
 		end
 	end
 
@@ -26,7 +26,7 @@ class PinsController < ApplicationController
 		if @pin.update(pin_params)
 			redirect_to @pin, notice: "Congrats!"
 		else
-			redirect_to 'edit'
+			render 'edit'
 		end
 	end
 
