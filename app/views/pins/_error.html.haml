@@ -1,0 +1,6 @@
+-if @pin.errors.any?
+	%h2
+	= pluralize(@pin.errors.count, "Error")
+	%ul
+	- @pin.errors.full_messages.each do |msg|
+		%li= msg

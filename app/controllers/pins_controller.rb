@@ -9,10 +9,11 @@ class PinsController < ApplicationController
 	def new
 		@pin = Pin.new
 	end
+
 	def create
-		@pins = Pin.new(pin_params)
+		@pin = Pin.new(pin_params)
 		if @pin.save
-			redirect_to @pin, notice: "Congrats!"
+			redirect_to pin_path(@pin), notice: "Congrats!"
 		else
 			redirect_to 'new'
 		end

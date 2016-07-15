@@ -1,0 +1,5 @@
+=render 'pins/error'
+= simple_form_for @pin do |x|
+		= x.input :title , label: "title", placeholder: "A title"
+		= x.input :description, label: "description", placeholder: "A description"
+		= x.button :submit
