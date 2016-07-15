@@ -1,7 +1,0 @@
-%ul	
-	%li 
-		=link_to
-	%li 
-		=link_to
-	%li 
-		=link_to
