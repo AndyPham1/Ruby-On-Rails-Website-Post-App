@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  root 'devise/sessions#new'
+  root 'pins#index'
   resources :pins do
     member do
       put "upvote" => "pins#upvote"
