@@ -1,13 +1,11 @@
-%h1= @pin.title
-
-%p	title
-= @pin.title
-%p description
-= @pin.description
-%p f
-= @pin.user.email
-%br
-%p fgbfgbfg
-= image_tag(@pin.pix.url, size: "300x300") if @pin.pix?
-
-= render 'pins/nav' 
+.container
+	.container1
+		.container2
+			= image_tag(@pin.pix.url, size: "300x300") if @pin.pix?
+			%h3= @pin.title
+			%p= @pin.description
+			%h3 posted by:
+			= @pin.user.email
+			%br
+			%br
+			= render 'pins/nav' 

@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'acts_as_votable', '~> 0.10.0'
 gem 'masonry-rails'
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

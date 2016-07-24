@@ -1,3 +1,78 @@
 // Place all the styles related to the Pins controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//BUTTON
+
+label {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 0px;
+}
+
+.button {
+  display: inline-block;
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  z-index: 2;
+  margin: 5px;
+}
+
+.button .bar {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 3px;
+  width: 30px;
+  margin: 5px;
+  color: rgba(0, 0, 0, 0.16);
+}
+
+#c {
+  display: none;
+}
+
+#c:checked + .pg .sidebar {
+  left: 0vw;
+}
+
+#c:checked + .pg .content {
+  margin-left: 16vw;
+}
+
+
+//SIDE BAR
+.sidebar {
+  height: 100vh;
+  width: 15vw;
+  z-index: 1;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
+  background-color: pink;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.3s;
+  position: fixed;
+  top: 0;
+  left: -15vw;
+}
+
+.sidebar:hover {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18);
+}
+
+.sidebar li {
+  display: block;
+}
+
+.sidebar li a {
+  font-family: "Fira Sans", sans-serif;
+  font-family-font-weight: 900;
+  display: inline-block;
+  font-size: 2em;
+  margin: 8vh 0 0 2vw;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  border-bottom: 3px transparent solid;
+}

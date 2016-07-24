@@ -15,3 +15,22 @@
 //= require masonry/jquery.masonry
 //= require turbolinks
 //= require_tree .
+$(function(){
+	$(".button").hover(function() {
+		if($("#c").is(":checked")){
+			$(".button").addClass("button2")
+		}
+		else
+		{
+			$(".button").removeClass("button2")
+		}
+	});
+
+	$('#error_explanation').css("display","none").append("<div class='cls'><p style='text-align:center;margin: 5px;'>x</p></div>").slideDown(300);
+		$('.cls').css({"float":"right","color":"#aaa","font-size":"16px","font-weight":"bold","cursor":"pointer","height":"30px","width":"30px","border-radius":"100%","text-align":"center"}).addClass("button2");
+	$('.cls').click(
+		function()
+		{ 
+			$("#error_explanation").slideUp(300);
+		});
+});

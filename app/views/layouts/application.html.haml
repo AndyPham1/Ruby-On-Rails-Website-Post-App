@@ -6,5 +6,20 @@
 		= javascript_include_tag 'application', 'data-turbolinks-track' => true
 		= csrf_meta_tags
 	%body
-		= render 'layouts/nav'
-		= yield
+		%ul
+			- flash.each do |x1,x2|
+				#error_explanation(style="position:relative;left:10px;")
+					= x2
+		%label(for="c")
+			.button
+				.bars
+					%span.bar
+					%span.bar
+					%span.bar
+
+		%input(type="checkbox" id="c" visibility="collapse")
+
+		.pg
+			= render 'layouts/nav'
+			.content
+				= yield

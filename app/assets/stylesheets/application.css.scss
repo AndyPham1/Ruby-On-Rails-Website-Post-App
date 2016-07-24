@@ -14,3 +14,324 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: lightblue;
+}
+
+html {
+  padding: 0px;
+  margin: 0px;
+}
+
+.page-content {
+  position: relative;
+  z-index: 0;
+}
+//BUTTON
+
+label {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 0px;
+}
+
+.button {
+  display: inline-block;
+  position: fixed;
+  height: 45px;
+  width: 45px;
+  z-index: 2;
+  margin: 5px;
+  padding: auto auto;
+  background-color: pink;
+  border-radius: 50%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
+}
+
+
+.button:hover {
+	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18);
+}
+
+.button2 {
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.14);
+}
+
+
+.button2:hover {
+	box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.20);
+}
+
+
+.button .bar {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 3px;
+  width: 30px;
+  margin: 5px auto;
+  color: rgba(0, 0, 0, 0.16);
+}
+
+.bars
+{
+	margin-top: 13px
+}
+
+#c {
+  display: none;
+}
+
+#c:checked + .pg .sidebar {
+  left: 0vw;
+}
+
+#c:checked + .pg .content {
+  margin-left: 250px
+}
+
+
+//SIDE BAR
+.sidebar {
+  height: 100vh;
+  width: 240px;
+  z-index: 1;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
+  background-color: pink;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.3s;
+  position: fixed;
+  top: 0;
+  left: -240px;
+}
+
+.sidebar:hover {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18);
+}
+
+.sidebar li {
+  display: block;
+}
+
+.sidebar li a {
+  font-family: "Fira Sans", sans-serif;
+  font-family-font-weight: 900;
+  display: inline-block;
+  font-size: 2em;
+  margin: 8vh 0 0 2vw;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  border-bottom: 3px transparent solid;
+}
+
+//PINS
+.content {
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+  margin-left: 5vw;
+}
+
+.content .box {
+  margin: 10px;
+  margin-bottom: 30px;
+  display: inline-block;
+  height: 300px;
+  width: 200px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+  transition: 0.3s;
+  background-color: lightpink;
+}
+
+.content .box:hover {
+  position: relative;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18);
+  border-bottom: lightgrey;
+}
+
+.content .box .title {
+  font-size: 26px;
+  font-family: 'Fira Sans', sans-serif;
+  border-bottom: darkgrey 2px solid;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.7);
+  height: 15%;
+  width: 90%;
+}
+
+.content .box .title a {
+  margin-bottom: 0px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.content .box .imgg {
+  height: 60%;
+  width: 100%;
+  background: url("Typography-art-posters-26.jpg");
+  background: cover;
+  overflow: hidden;
+}
+
+.content .box .imggg {
+	height: 100%;
+	width: auto;
+}
+
+.content .box .tx {
+  margin: 0px;
+  padding: 0px;
+  height: 25%;
+  width: 100%;
+  background-color: lightgrey;
+  overflow: hidden;
+}
+
+.content .box .tx p{
+  margin: 0px;
+  padding: 10px;
+  height: 100%
+}
+
+////////////form
+
+.container label {
+  display: block;
+  height: 30px;
+  width: 100px;
+  margin: 0 auto;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 18px;
+  position: relative;
+  top: 0px;
+}
+
+
+.container {
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+  width: 100%;
+}
+
+.container .container1 {
+  display: inline-block;
+  height: 70vh;
+  width: 80%;
+  position: relative;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: pink;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
+}
+
+
+.container .container1:hover {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18);
+}
+
+.container .container1 .container2 {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  top: 60%;
+  right: 0;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container .container1 .container2 h3 {
+  color-light: grey;
+  font-family: 'Fira Sans', sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 26px;
+}
+
+.container .container1 .container2 input {
+  position: relative;
+  display: block;
+  margin: 10px auto 10px auto;
+}
+
+.container .container1 .container2 a {
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.container .container1 .container2:hover {
+  text-decoraction: underline;
+}
+
+.btn {
+  background-color: #4CAF50;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 20px auto;
+  font-family: 'Fira Sans', sans-serif;
+  letter-spacing: 1px;
+  font-size: 18px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
+}
+
+.btn:hover {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18);
+}
+
+.container .error
+{
+	display: block;
+	font-family: 'Fira Sans', sans-serif;
+}
+
+.field label
+{
+  height: 30px;
+  width: 200px;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 18px;
+  position: relative;
+  top: 0px;
+}
+
+.field input[type="checkbox"] ~ label
+{
+	display: inline-block
+}
+
+#error_explanation
+{
+	padding: 10px;
+	margin: 10px;
+	display: inline-block;
+	background-color: pink;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
+	font-family: 'Fira Sans', sans-serif;
+}
+#error_explanation:hover
+{
+	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18);
+}

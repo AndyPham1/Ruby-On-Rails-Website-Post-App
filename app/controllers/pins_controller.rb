@@ -1,8 +1,8 @@
 class PinsController < ApplicationController
-	before_action :f_pin, only: [:show,:edit,:update,:destroy]
+	before_action :f_pin, only: [:show,:edit,:update,:destroy, :upvote, :downvote]
 
 	def index
-		@pins = Pin.all
+		@pins = Pin.all.order(:cached_weighted_score => :desc)
 	end
 	def show
 	end
@@ -35,6 +35,15 @@ class PinsController < ApplicationController
 	def destroy
 		@pin.destroy
 		redirect_to :index
+	end
+
+	def upvote
+		@pin.upvote_from current_user
+		redirect_to :back
+	end
+	def downvote
+		@pin.downvote_from current_user
+		redirect_to :back
 	end
 
 	private
