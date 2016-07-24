@@ -1,6 +1,6 @@
 class PinsController < ApplicationController
 	before_action :f_pin, only: [:show,:edit,:update,:destroy, :upvote, :downvote]
-
+	before_action :authenticate_user!
 	def index
 		@pins = Pin.all.order(:cached_weighted_score => :desc)
 	end
@@ -11,7 +11,6 @@ class PinsController < ApplicationController
 	end
 
 	def create
-		debugger
 		@pin = current_user.pins.build(pin_params)
 		@pin.pix = params[:pin][:pix]
 		if @pin.save
