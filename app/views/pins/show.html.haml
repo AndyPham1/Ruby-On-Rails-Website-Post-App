@@ -1,7 +1,8 @@
 .container
 	.container1
 		.container2
-			= image_tag(@pin.pix.url, size: "300x300") if @pin.pix?
+			.img_tag
+				= image_tag(@pin.pix.url, size: "300x300") if @pin.pix?
 			%h3= @pin.title
 			%p= @pin.description
 			%h3 posted by:

@@ -9,11 +9,11 @@
 				%p.tx= pin.description
 
 			.tx2
-				= link_to "upvote", upvote_pin_path(pin), method: :put
+				= link_to "Upvote", upvote_pin_path(pin), method: :put
 				= pin.get_upvotes.size
-				= link_to "downvote",downvote_pin_path(pin), method: :put
+				= link_to "Downvote",downvote_pin_path(pin), method: :put
 				= pin.get_downvotes.size
-
-				=link_to "Edit", edit_pin_path(pin)
-				=link_to "Rid", pin_path(pin), method: :delete, data: {confirm: "Are you sure?"}
+				- if current_user == pin.user
+					=link_to "Edit", edit_pin_path(pin)
+					=link_to "Rid", pin_path(pin), method: :delete, data: {confirm: "Are you sure?"}
 		
