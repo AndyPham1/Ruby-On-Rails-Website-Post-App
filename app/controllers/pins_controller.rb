@@ -1,6 +1,5 @@
 class PinsController < ApplicationController
 	before_action :f_pin, only: [:show,:edit,:update,:destroy, :upvote, :downvote]
-	before_action :authenticate_user!
 	def index
 		@pins = Pin.all.order(:cached_weighted_score => :desc)
 	end
