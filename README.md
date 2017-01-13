@@ -4,15 +4,15 @@ I made a really simple and cheesy ruby on rails website.
 
 Key Features
 
-  -Login and Sign up
+  - Login and Sign up
   
-  -Add,Remove,Edit Post
+  - Add,Remove,Edit Post
   
-  -Vote On Post
+  - Vote On Post
   
-  -MVC model
+  - MVC model
   
-  -Can upload picture
+  - Can upload picture
 
 This is a simple ruby on rails website.
 
@@ -22,3 +22,5 @@ The project utilizes the MVC pattern, Css, Haml, Active Records, and HTML.
 
 The project has help me better grasp different concept and tool above along with working with different gems to maintain the project and expand it's functionality quickly.
 
+Video:
+https://youtu.be/S1a-2in7gmY
