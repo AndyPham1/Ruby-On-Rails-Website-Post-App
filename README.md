@@ -23,4 +23,4 @@ The project utilizes the MVC pattern, Css, Haml, Active Records, and HTML.
 The project has help me better grasp different concept and tool above along with working with different gems to maintain the project and expand it's functionality quickly.
 
 Video:
-https://youtu.be/S1a-2in7gmY
+https://youtu.be/uwpC0EtHeSI
