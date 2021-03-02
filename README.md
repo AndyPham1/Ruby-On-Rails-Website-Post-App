@@ -1,4 +1,4 @@
-# ReallySimpleRubyOnRailsWebsite
+# Ruby On Rails Post App
 
 Ruby On Rails Website.
 
